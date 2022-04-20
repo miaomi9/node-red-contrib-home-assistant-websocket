@@ -1,0 +1,1 @@
+const t={key:"v-28f3a601",path:"/node/entity-config.html",title:"Entity Config",lang:"en-US",frontmatter:{sidebarDepth:1},excerpt:"",headers:[],git:{updatedTime:1647350454e3,contributors:[{name:"Jason",email:"37859597+zachowj@users.noreply.github.com",commits:2}]},filePathRelative:"node/entity-config.md"};export{t as data};

@@ -1,0 +1,1 @@
+const t={key:"v-636bc153",path:"/node/button.html",title:"Button",lang:"en-US",frontmatter:{sidebarDepth:1},excerpt:"",headers:[{level:2,title:"Outputs",slug:"outputs",children:[]}],git:{updatedTime:1647350454e3,contributors:[{name:"Jason",email:"37859597+zachowj@users.noreply.github.com",commits:2}]},filePathRelative:"node/button.md"};export{t as data};
