@@ -4,87 +4,87 @@ sidebarDepth: 1
 
 # Call Service
 
-Sends a request to home assistant for any domain and service available (`light/turn_on`, `input_select/select_option`, etc..)
+向家庭助理发送任何可用域和服务的请求 (`light/turn_on`, `input_select/select_option`, 等)
 
-::: tip Helpful Examples
-[Call Service Tips and Tricks](/guide/call-service.html)
+::: 提示有用的示例
+[呼叫服务提示和技巧](/guide/call-service.html)
 :::
 
-## Configuration
+## 配置
 
-### Domain <Badge text="required"/>
+### 范围 <Badge text="required"/>
 
-- Type: `string`
+- 类型: `string`
+- 接受 [Mustache Templates](/guide/mustache-templates.md)
+
+要调用的服务域
+
+可以通过#在域末尾添加 a 来使用自定义域
+
+### 服务<Badge text="required"/>
+
+- 类型: `string`
 - Accepts [Mustache Templates](/guide/mustache-templates.md)
 
-Service domain to call
+服务调用
 
-A custom domain can be used by adding a `#` at the end of the domain
+可以通过#在服务末尾添加一个来使用自定义服务
 
-### Service <Badge text="required"/>
+### 范围
 
-- Type: `string`
-- Accepts [Mustache Templates](/guide/mustache-templates.md)
+- 类型: `an array of area ids`
+- 接受 [Mustache Templates](/guide/mustache-templates.md) for ids
 
-Service to call
+将用作服务调用目标的区域 ID 列表
 
-Custom service can be used by adding a `#` at the end of the service
+#可以通过在 id 末尾添加 a 来将自定义 id 插入到列表中
 
-### Area
+### 设备
 
-- Type: `an array of area ids`
-- Accepts [Mustache Templates](/guide/mustache-templates.md) for ids
+- 类型: `an array of device ids`
+- 接受 [Mustache Templates](/guide/mustache-templates.md) for ids
 
-A list of area ids that will be used as targets for the service call
+将用作服务调用目标的设备 ID 列表
 
-Custom ids can be inserted into the list by adding a `#` at the end of the id
+#可以通过在 id 末尾添加 a 来将自定义 id 插入到列表中
 
-### Device
+### 实体
 
-- Type: `an array of device ids`
-- Accepts [Mustache Templates](/guide/mustache-templates.md) for ids
+- 类型: `an array of entity ids`
+- 接受 [Mustache Templates](/guide/mustache-templates.md) for ids
 
-A list of device ids that will be used as targets for the service call
+将用作服务调用目标的实体 ID 列表
 
-Custom ids can be inserted into the list by adding a `#` at the end of the id
+### 数据
 
-### Entity
+- 类型: `JSONata | JSON`
+- 当数据类型为 JSON 时接受Mustache 模板
 
-- Type: `an array of entity ids`
-- Accepts [Mustache Templates](/guide/mustache-templates.md) for ids
+要传递的 JSON 对象.
 
-A list of entity ids that will be used as targets for the service call
+### 合并上下文
 
-### Data
+- 类型: `string`
 
-- Type: `JSONata | JSON`
-- Accepts [Mustache Templates](/guide/mustache-templates.md) when data type is JSON
+如果已定义，将尝试将全局和流上下文变量合并到配置中
 
-JSON object to pass along.
+### 替代模板标签
 
-### Merge Context
+- 类型: `boolean`
 
-- Type: `string`
+将用于 mustache 模板的标签更改为<%和%>
 
-If defined will attempt to merge the global and flow context variable into the config
+### 队列
 
-### Alternative Template Tags
+- 类型: `none | first | all | last`
 
-- Type: `boolean`
+将存储与 Home Assistant 断开连接时收到的第一条、最后一条或所有消息，并在再次连接时发送它们
 
-Will change the tags used for the mustache template to `<%` and `%>`
+## 输入
 
-### Queue
+所有属性都需要在msg.payload.
 
-- Type: `none | first | all | last`
-
-Will store the first, last, or all messages received while disconnected from Home Assistant and send them once connected again
-
-## Input
-
-All properties need to be under `msg.payload`.
-
-Sample input
+样本输入
 
 ```JSON
 {
@@ -101,56 +101,54 @@ Sample input
 }
 ```
 
-#### Merging
+#### 合并
 
-If the incoming message has a `payload` property with `domain`, `service` set it will override any config values if set.
+如果传入消息具有带有 的payload属性domain，service则设置它将覆盖任何配置值（如果已设置）.
 
-If the incoming message has a `payload.data` that is an object or parsable into an object these properties will be <strong>merged</strong> with any config values set.
+如果传入消息具有一个payload.data对象或可解析为对象，则这些属性将与任何配置值集合并.
 
-If the node has a property value in its config for `Merge Context` then the `flow` and `global` contexts will be checked for this property which should be an object that will also be merged into the data payload.
+如果节点在其配置中具有属性值，Merge Context则将检查flow和global上下文的该属性，该属性应该是也将合并到数据有效负载中的对象.
 
-#### Merge Resolution
+#### 合并解决方案
 
-As seen above the `data` property has a lot going on in the way of data merging, in the end, all of these are optional and the rightmost will win if a property exists in multiple objects
+如上所述，“数据”属性在数据合并的过程中发生了很多事情，最终，所有这些都是可选的，如果一个属性存在于多个对象中，那么最右边的属性将胜出
 
-Config Data, Global Data, Flow Data, Payload Data ( payload data property always
-wins if provided
+Config Data, Global Data, Flow Data, Payload Data ( 如果提供有效负载数据属性，则始终获胜
 
-### domain
+### 区域
 
-- Type: `string`
+- 类型: `string`
 
-Service domain to call
+要调用的服务区域
 
-### service
+### 服务
 
-- Type: `string`
+- 类型: `string`
 
-Service service to call
+服务调用
 
-### data
+### 数据
+- 类型: `JSON Object`
 
-- Type: `JSON Object`
+与服务调用一起发送的服务数据
 
-Service data to send with the service call
+### 目标
 
-### target
+- 类型: `JSON Object with area_id, device_id, and entity_id as array properties`
 
-- Type: `JSON Object with area_id, device_id, and entity_id as array properties`
+服务调用的目标
 
-Targets of the service call
+## 输出
 
-## Output
+值类型:
 
-Value types:
+- `sent data`: 发送到家庭助理的数据
+- `config`: 配置节点的属性
 
-- `sent data`: data sent to Home Assistant
-- `config`: config properties of the node
-
-## References
+## 参考
 
 <info-panel-only>
 
-[External Docs](/node/call-service.md)
+[外部文档](/node/call-service.md)
 
 </info-panel-only>
