@@ -2,15 +2,15 @@
 sidebarDepth: 1
 ---
 
-# Button
+# 按钮
 
-Creates a [button entity](https://developers.home-assistant.io/docs/core/entity/button) in Home Assistant that will trigger the flow when pressed.
+创建 [按钮实体](https://developers.home-assistant.io/docs/core/entity/button) 在家庭助理，将触发流时按下.
 
-## Outputs
+## 输出
 
-Value types:
+值类型:
 
-- `entity`: full entity object
-- `entity id`: entity id of the pressed button
-- `entity state`: entity state of the pressed button
-- `config`: config properties of the node
+- `entity`: 完整的实体对象
+- `entity id`: 按下按钮的实体 id
+- `entity state`: 按下按钮的实体状态
+- `config`: 配置节点的属性
