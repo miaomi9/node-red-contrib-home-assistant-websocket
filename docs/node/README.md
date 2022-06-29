@@ -14,23 +14,23 @@
 
 ## [Config Server](./config-server.md)
 
-Home Assistant connection configuration
+家庭助理连接配置
 
 ## [Current State](./current-state.md)
 
-Fetches the last known state for any entity on input
+获取输入上任何实体的最后一个已知状态
 
 ## [Device](./device.md)
 
-Creates device automations and calls device actions
+创建设备自动化并调用设备操作
 
 ## [Entity](./entity.md)
 
-Creates an entity in Home Assistant which can be manipulated from this node
+在 Home Assistant 中创建一个实体，可以从此节点进行操作
 
 ## [Events: all](./events-all.md)
 
-Listens for all types of events from home assistant with the ability to filter by event type
+监听来自家庭助理的所有类型的事件，并能够按事件类型进行过滤
 
 ## [Events: state](events-state.md)
 
