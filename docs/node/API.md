@@ -4,61 +4,61 @@ sidebarDepth: 1
 
 # API
 
-## Config
+## 配置
 
-### Protocol <Badge text="required"/>
+### 协议 <Badge text="required"/>
 
-- Type: `string`
-- Values: `websocket|http`
-- Default: `websocket`
+- 类型: `string`
+- 数值: `websocket|http`
+- 默认: `websocket`
 
-Protocol to use to access Home Assistant API.
+用于访问 Home Assistant API 的协议.
 
-### Method
+### 方法
 
-- Type: `string`
-- Values: `get|post`
+- 类型: `string`
+- 数值: `get|post`
 
-Type of method to use to access the HTTP endpoint.
+用于访问 HTTP 端点的方法类型.
 
-### Path
+### 路径
 
-- Type: `string`
-- Accepts [Mustache Templates](/guide/mustache-templates.md)
+- 类型: `string`
+- 接受 [Mustache Templates](/guide/mustache-templates.md)
 
-URL of the API endpoint.
+API 端点的 URL.
 
-### Params
+### 参数
 
-- Type: `Object`
-- Accepts [Mustache Templates](/guide/mustache-templates.md)
+- 类型: `Object`
+- 接受 [Mustache Templates](/guide/mustache-templates.md)
 
-A JSON object with key/value pairs that will be converted into URL parameters.
+具有将转换为 URL 参数的键/值对的 JSON 对象.
 
-### Data
+### 数据
 
-- Type: `Object`
+- 类型: `Object`
 - Accepts [Mustache Templates](/guide/mustache-templates.md) when the data type
   is JSON
 
-JSON Object to send for WebSocket requests and HTTP posts.
+为 WebSocket 请求和 HTTP 帖子发送的 JSON 对象.
 
-### Results
+### 结果
 
-- Type: `string`
+- 类型: `string`
 
-  Location to save the API results.
+  保存 API 结果的位置.
 
-## Input
+## 输入
 
-All properties need to be under `msg.payload`.
+所有属性都需要在msg.payload.
 
-### protocol
+### 协议
 
-- Type: `string`
-- Values: `websocket|http`
+- 类型: `string`
+- 接受: `websocket|http`
 
-Overrides or sets the protocol property of the config.
+覆盖或设置配置的协议属性.
 
 ### method
 
