@@ -34,15 +34,15 @@
 
 ## [Events: state](events-state.md)
 
-Listens for only `state_changed` events from home assistant
+仅监听state_changed来自家庭助理的事件
 
 ## [Fire Event](./fire-event.md)
 
-Fire an event on the event bus
+在事件总线上触发事件
 
 ## [Get Entities](./get-entities.md)
 
-Get entities based on search criteria with 3 different output options
+使用 3 个不同的输出选项根据搜索条件获取实体
 
 ## [Get History](./get-history.md)
 
