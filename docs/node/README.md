@@ -2,7 +2,7 @@
 
 ## [API](./API.md)
 
-Access all points of the WebSocket and HTTP API.
+访问 WebSocket 和 HTTP API 的所有点。
 
 ## [Button](./button.md)
 
