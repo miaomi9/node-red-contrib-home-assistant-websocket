@@ -1,10 +1,10 @@
-# Nodes
+# 节点
 
 ## [API](./API.md)
 
 访问 WebSocket 和 HTTP API 的所有点。
 
-## [Button](./button.md)
+## [按钮](./button.md)
 
 在 Home Assistant 中创建一个按钮，触发 Node-RED 中的流程
 
