@@ -6,11 +6,11 @@
 
 ## [Button](./button.md)
 
-Creates a button in Home Assistant that triggers a flow in Node-RED
+在 Home Assistant 中创建一个按钮，触发 Node-RED 中的流程
 
 ## [Call Service](./call-service.md)
 
-Sends a request to home assistant for any domain and service available ( `light/turn_on`, `input_select/select_option`, etc..)
+向家庭助理发送任何可用域和服务的请求（light/turn_on、input_select/select_option等）
 
 ## [Config Server](./config-server.md)
 
