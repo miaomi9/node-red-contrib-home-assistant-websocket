@@ -46,16 +46,15 @@
 
 ## [Get History](./get-history.md)
 
-Fetches HomeAssistant history on input
+在输入时获取 HomeAssistant 历史记录
 
 ## [Poll State](./poll-state.md)
 
-Outputs the state of an entity at regular intervals, optionally also at startup
-and every time the entity changes if desired
+定期输出实体的状态，如果需要，也可以在启动时和每次实体更改时输出
 
 ## [Render Template](./render-template.md)
 
-Allows rendering of templates on input
+允许在输入时渲染模板
 
 ## [Tag](./tag.md)
 
