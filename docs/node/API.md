@@ -56,50 +56,50 @@ API 端点的 URL.
 ### 协议
 
 - 类型: `string`
-- 接受: `websocket|http`
+- 数值: `websocket|http`
 
 覆盖或设置配置的协议属性.
 
-### method
+### 方法
 
-- Type: `string`
-- Values: `get|post`
+- 类型: `string`
+- 数值: `get|post`
 
-Overrides or sets the method property of the config.
+覆盖或设置配置的方法属性.
 
-### path
+### 路径
 
-- Type: `string`
+- 类型: `string`
 
-Overrides or sets the path property of the config.
+覆盖或设置配置的路径属性.
 
-### data
+### 数据
 
-- Type: `Object|string`
+- 类型: `Object|string`
 
-Overrides or sets the data/params property of the config.
+覆盖或设置配置的 data/params 属性.
 
-### location
+### 位置
 
-- Type: `string`
+- 类型: `string`
 
-Overrides or sets the results property of the config.
+覆盖或设置配置的结果属性.
 
-### locationType
+### 位置类型
 
-- Type: `string`
-- Values: `msg|flow|global`
+- 类型: `string`
+- 数值: `msg|flow|global`
 
-Overrides or sets the results type property of the config.
+覆盖或设置配置的结果类型属性.
 
-## Output
+## 输出
 
-Value types:
+值类型:
 
-- `results`: results of the API request
-- `config`: config properties of the node
+- `results`: API 请求的结果
+- `config`: c配置节点的属性
 
-## References
+## 参考
 
 - [http api](https://developers.home-assistant.io/docs/api/rest)
 - [websocket api](https://developers.home-assistant.io/docs/api/websocket)
