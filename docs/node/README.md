@@ -70,12 +70,12 @@
 
 ## [Wait Until](./wait-until.md)
 
-When an input is received the node will wait until the condition is met or the timeout occurs then will pass on the last received message
+当接收到输入时，节点将等待直到满足条件或发生超时，然后将传递最后收到的消息
 
 ## [Webhook](./webhook.md)
 
-当接收到输入时，节点将等待直到满足条件或发生超时，然后将传递最后收到的消息
+输出从 Home Assistant 中创建的 webhook 接收到的数据
 
 ## [Zone](./zone.md)
 
-输出从 Home Assistant 中创建的 webhook 接收到的数据
+当配置的实体之一进入或离开定义的区域之一时输出
