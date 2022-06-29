@@ -58,15 +58,15 @@
 
 ## [Tag](./tag.md)
 
-Outputs when Home Assistant receives a tag scanned event for a configured tag id
+当 Home Assistant 接收到已配置标签 ID 的标签扫描事件时输出
 
 ## [Time](./time.md)
 
-A node that can be scheduled to trigger at a future date and time from a Home Assistant entity
+可以安排在未来日期和时间从家庭助理实体触发的节点
 
 ## [Trigger: state](./trigger-state.md)
 
-Much like the `State Changed Node` however, provides some advanced functionality around common automation use cases
+然而，很像State Changed Node，围绕常见的自动化用例提供了一些高级功能
 
 ## [Wait Until](./wait-until.md)
 
@@ -74,8 +74,8 @@ When an input is received the node will wait until the condition is met or the t
 
 ## [Webhook](./webhook.md)
 
-Outputs the data received from the created webhook in Home Assistant
+当接收到输入时，节点将等待直到满足条件或发生超时，然后将传递最后收到的消息
 
 ## [Zone](./zone.md)
 
-Outputs when one of the configured entities enter or leaves one of the defined zones
+输出从 Home Assistant 中创建的 webhook 接收到的数据
